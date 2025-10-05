@@ -1,93 +1,127 @@
-##Tic Tac Toe (Python)
-#Overview
+# Tic Tac Toe (Python)
 
-This is a simple command-line Tic Tac Toe game built in Python using functions and logical operations.
-The game allows two players (X and O) to take turns placing their symbols on a 3x3 grid. It checks for wins across rows, columns, and diagonals after each move and declares the winner or a draw accordingly.
+A simple, clean **command-line Tic Tac Toe** game built in Python.  
+Two players (X and O) take turns on a 3×3 grid.  
+After each move, the game checks rows, columns, and diagonals for a win—or declares a draw when the board is full.
 
-#Features
+---
 
-Two-player mode (X and O)
+## Overview
 
-Input validation for correct row and column entries
+This project is a beginner-friendly implementation of the classic Tic Tac Toe game using Python.  
+It’s designed to help understand logic-based game design, input handling, and use of NumPy arrays.
 
-Win detection across:
-Rows
-Columns
-Both diagonals
+- Turn-based, two-player gameplay (X and O)
+- Clear board rendering after every move
+- **Input validation** for correct entries (1–3)
+- **Win detection** across:
+  - Rows  
+  - Columns  
+  - Both diagonals  
+- Automatic **winner/draw** announcement
 
- Displays board after every move
+---
 
- Declares winner or draw automatically
+## Features
 
-#Tech Stack
+- Two-player mode (X and O)  
+- Input validation for row and column entries  
+- Win detection across:
+  - Rows  
+  - Columns  
+  - Main and anti-diagonal  
+- Displays the board after every move  
+- Declares **winner** or **draw** automatically  
 
-Language: Python
+---
 
-Library Used: numpy (for easy matrix/array handling)
+## Tech Stack
 
-#How It Works
+- **Language:** Python 3.x  
+- **Library Used:** `numpy` (for easy matrix/array handling)
 
-The board is represented as a 3x3 NumPy array.
+---
 
-Players take turns to enter their move (row and column).
+## How It Works
 
-After every move:
+1. The board is represented as a **3×3 NumPy array** filled with `'-'` (empty).
+2. Players take turns entering **row** and **column** numbers (`1`, `2`, or `3`).
+3. After each move:
+   - The program checks all rows, columns, and diagonals.
+   - If any of them contain three identical symbols (`X` or `O`), a **winner** is declared.
+   - If all cells are filled and no winner exists, the game ends in a **draw**.
+4. The board is printed after every move to show progress.
 
-The program checks for 3 consecutive identical symbols in any row, column, or diagonal.
+---
 
-If found → declares a winner.
-
-If all cells are filled and no winner → declares a draw.
-
-#Sample Gameplay
+## Sample Gameplay
 [['-' '-' '-']
- ['-' '-' '-']
- ['-' '-' '-']]
+['-' '-' '-']
+['-' '-' '-']]
 X turn
 Enter the row -1 or 2 or 3: 1
 Enter the column- 1 or 2 or 3: 1
 
 [['X' '-' '-']
- ['-' '-' '-']
- ['-' '-' '-']]
+['-' '-' '-']
+['-' '-' '-']]
 O turn
 Enter the row -1 or 2 or 3: 2
 Enter the column- 1 or 2 or 3: 1
 ...
 X Wins
 
-#How to Run
 
-Install Python 3.x
+---
 
-Install NumPy (if not already installed):
+## Installation & Run Instructions
+
+### Step 1: Install Python
+Make sure you have **Python 3.x** installed.  
+Check using:
+```bash
+python --version
+```
+###Step 2: Install NumPy
+
+If you don’t already have NumPy, install it with:
 
 pip install numpy
 
+###Step 3: Run the Game
 
-Run the script:
-
+Navigate to your project folder and run:
+```
 python tic_tac_toe.py
 
-#Learning Highlights
+```
+or (on some systems)
+```
+python3 tic_tac_toe.py
+```
 
-Functional programming approach in Python
+## Requirements 
+```
+numpy>=1.20
+```
 
-Logic-based flow for game design
+## How to Play
 
-Input validation and condition handling
+- Run the script in your terminal or IDE.
 
-Use of 2D arrays with NumPy
+-cThe board will display as a 3×3 grid with '-' for empty cells.
 
-#Future Enhancements
+- Player X goes first.
 
-Add AI opponent (using Minimax algorithm)
+- Enter your desired row and column (1–3).
 
-Implement a Graphical User Interface (GUI) using tkinter or pygame
+- The program automatically checks for a winner or draw after each move.
 
-Add score tracking and replay option
+- Keep playing until:
 
-#Author
-Ch Jashwanth Kumar
-B.E. in Artificial Intelligence and Data Science
-Chaitanya Bharathi Institute of Technology (CBIT), Hyderabad
+- One player wins 🎉
+
+- Or all cells are filled → It’s a draw 🤝
+
+## Author
+Ch Jashwanth 
